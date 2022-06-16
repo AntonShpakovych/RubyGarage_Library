@@ -6,7 +6,6 @@ GEM
     fasterer (0.10.0)
       colorize (~> 0.7)
       ruby_parser (>= 3.19.1)
-    json (2.6.1)
     parallel (1.22.1)
     parser (3.1.2.0)
       ast (~> 2.4.1)
@@ -24,19 +23,27 @@ GEM
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.18.0)
       parser (>= 3.1.1.0)
+    rubocop-performance (1.14.2)
+      rubocop (>= 1.7.0, < 2.0)
+      rubocop-ast (>= 0.4.0)
     ruby-progressbar (1.11.0)
     ruby_parser (3.19.1)
       sexp_processor (~> 4.16)
     sexp_processor (4.16.1)
     unicode-display_width (2.1.0)
+    yaml (0.2.0)
 
 PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  fasterer
-  json
-  rubocop
+  fasterer (= 0.10.0)
+  rubocop (= 1.30.1)
+  rubocop-performance (= 1.14.2)
+  yaml (= 0.2.0)
+
+RUBY VERSION
+   ruby 3.1.2p20
 
 BUNDLED WITH
    2.3.15
