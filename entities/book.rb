@@ -9,8 +9,6 @@ class Book
     validate(title, author)
     @title = title
     @author = author
-  rescue StandardError
-    exit
   end
 
   def validate(title, author)

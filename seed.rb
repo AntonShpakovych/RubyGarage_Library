@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'config/initializer'
+
 library = Library.new
 author1 = Author.new('Author1', 'bio1')
 author2 = Author.new('Author2', 'bio1')
@@ -37,5 +38,5 @@ library.add_some_entitie(order9)
 library.add_some_entitie(order3)
 library.add_some_entitie(order10)
 pp library.top_reader(5)
-pp library.number_of_readers_most_popular_book
+# pp library.number_of_readers_most_popular_book
 # library.save(Library::FILE_FOR_STORE, library.data_to_store)

@@ -9,7 +9,5 @@ class Author
     val_for_type(name, String)
     @biography = biography
     @name = name
-  rescue StandardError
-    exit
   end
 end

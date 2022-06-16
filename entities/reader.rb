@@ -11,8 +11,6 @@ class Reader
     @city = city
     @street = street
     @house = house
-  rescue StandardError
-    exit
   end
 
   def validate(name, email, city, street, house)

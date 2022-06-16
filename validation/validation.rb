@@ -10,7 +10,7 @@ module Validation
 
   def val_for_type(data, type)
     if type == Integer
-      data.is_a?(type) && data >= 1 ? data : MyError(STRING)
+      data.is_a?(type) && data.positive? ? data : MyError(STRING)
     elsif type == String
       data.is_a?(type) && !data.empty? ? data : MyError(STRING)
     else
@@ -19,6 +19,6 @@ module Validation
   end
 
   def val_for_instance(data, klass)
-    raise MyError(KLASS) unless data.instance_of?(klass)
+    raise MyError(KLASS) unless data.is_a?(klass)
   end
 end

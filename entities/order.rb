@@ -9,8 +9,6 @@ class Order
     @book = book
     @reader = reader
     @date = date
-  rescue StandardError
-    exit
   end
 
   def validate

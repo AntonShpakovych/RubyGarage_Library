@@ -44,8 +44,8 @@ class Library
 
   private
 
-  def top(entitie_name, uniq_name, quantity)
-    grouped = @orders.group_by(&entitie_name).map { |_key, value| value.uniq(&uniq_name) }.flatten.map(&entitie_name)
+  def top(entity_name, uniq_name, quantity)
+    grouped = @orders.group_by(&entity_name).map { |_key, orders| orders.uniq(&uniq_name) }.flatten.map(&entity_name)
     grouped.sort_by { |reader| -grouped.count(reader) }.uniq.first(quantity)
   end
 end
