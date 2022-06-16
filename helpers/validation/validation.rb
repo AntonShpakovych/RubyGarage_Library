@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-# Module for validation  class
-class MyError < StandardError; end
-
 module Validation
   STRING = 'Must be a string and not empty'
   KLASS = 'Must be an instance of class'
@@ -10,9 +7,9 @@ module Validation
 
   def val_for_type(data, type)
     if type == Integer
-      data.is_a?(type) && data.positive? ? data : MyError(STRING)
+      data.is_a?(type) && data.positive? ? data : AttributeError(STRING)
     elsif type == String
-      data.is_a?(type) && !data.empty? ? data : MyError(STRING)
+      data.is_a?(type) && !data.empty? ? data : AttributeError(STRING)
     else
       raise MyError(GLOBAL)
     end
