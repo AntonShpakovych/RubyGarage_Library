@@ -33,7 +33,7 @@ class Library
     top(:book, :reader, quantity)
   end
 
-  def number_of_readers_most_popular_book(some_quantity = 3)
+  def number_of_readers_most_popular_books(some_quantity = 3)
     top_books = most_popular_books(some_quantity)
     @orders.select { |order| top_books.include?(order.book) }.uniq(&:reader).length
   end
