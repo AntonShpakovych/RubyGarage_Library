@@ -35,7 +35,7 @@ class Library
 
   def number_of_readers_most_popular_books(some_quantity = 3)
     top_books = most_popular_books(some_quantity)
-    @orders.select { |order| top_books.include?(order.book) }.uniq(&:reader).length
+    orders.select { |order| top_books.include?(order.book) }.uniq(&:reader).length
   end
 
   def data_to_store
@@ -45,7 +45,7 @@ class Library
   private
 
   def top(entity_name, uniq_name, quantity)
-    grouped = @orders.group_by(&entity_name).map { |_key, orders| orders.uniq(&uniq_name) }.flatten.map(&entity_name)
+    grouped = orders.group_by(&entity_name).map { |_key, orders| orders.uniq(&uniq_name) }.flatten.map(&entity_name)
     grouped.sort_by { |reader| -grouped.count(reader) }.uniq.first(quantity)
   end
 end
