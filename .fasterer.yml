@@ -17,3 +17,4 @@ speedups:
   select_last_vs_reverse_detect: true
   getter_vs_attr_reader: true
   setter_vs_attr_writer: true
+  
