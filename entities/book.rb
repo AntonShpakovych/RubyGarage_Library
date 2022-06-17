@@ -11,6 +11,8 @@ class Book
     @author = author
   end
 
+  private
+
   def validate(title, author)
     val_for_type(title, String)
     val_for_instance(author, Author)

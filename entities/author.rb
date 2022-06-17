@@ -5,9 +5,18 @@ class Author
 
   attr_reader :name, :biography
 
-  def initialize(name, biography = '')
-    val_for_type(name, String)
+  BIOGRAPHY = "Author doesn't have biography"
+
+  def initialize(name, biography = BIOGRAPHY)
+    validate(name, biography)
     @biography = biography
     @name = name
+  end
+
+  private
+
+  def validate(name, biography)
+    val_for_type(name, String)
+    val_for_type(biography, String)
   end
 end

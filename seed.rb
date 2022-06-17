@@ -3,7 +3,7 @@
 require_relative 'config/initializer'
 
 library = Library.new
-author1 = Author.new('Author1', 'bio1')
+author1 = Author.new('Author1')
 author2 = Author.new('Author2', 'bio1')
 author3 = Author.new('Author3', 'bio1')
 book1 = Book.new('Book1', author1)

@@ -39,7 +39,7 @@ class Library
   end
 
   def data_to_store
-    { authors:, books:, readers:, orders: }
+    { authors: authors, books: books, readers: readers, orders: orders }
   end
 
   private
