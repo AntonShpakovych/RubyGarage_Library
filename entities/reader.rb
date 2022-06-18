@@ -6,12 +6,15 @@ class Reader
   attr_reader :name, :email, :city, :street, :house
 
   def initialize(name, email, city, street, house)
+    validate(name, email, city, street, house)
     @name = name
     @email = email
     @city = city
     @street = street
     @house = house
   end
+
+  private
 
   def validate(name, email, city, street, house)
     val_for_type(name, String)
