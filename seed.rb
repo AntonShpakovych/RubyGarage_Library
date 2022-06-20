@@ -37,6 +37,7 @@ library.add_some_entitie(order8)
 library.add_some_entitie(order9)
 library.add_some_entitie(order3)
 library.add_some_entitie(order10)
+library.save('asd', library.data_to_store)
 pp library.top_reader
 pp library.most_popular_books
 pp library.number_of_readers_most_popular_books

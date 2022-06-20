@@ -5,7 +5,7 @@ module Validation
   KLASS = 'Must be an instance of class'
   GLOBAL = 'Must be a string or a integer'
   INTEGER = 'Must be a integer'
-  
+
   private
 
   def val_for_type(data, type)
