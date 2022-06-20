@@ -16,12 +16,12 @@ class Library
     @orders = data_store[:orders] || []
   end
 
-  def add_some_entitie(entitie)
-    case entitie
-    when Author then authors.push(entitie)
-    when Book then books.push(entitie)
-    when Reader then readers.push(entitie)
-    when Order then orders.push(entitie)
+  def add_some_entitie(entity)
+    case entity
+    when Author then authors.push(entity)
+    when Book then books.push(entity)
+    when Reader then readers.push(entity)
+    when Order then orders.push(entity)
     end
   end
 
